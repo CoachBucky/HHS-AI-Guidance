@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Acceptable Use Policy for High School Students</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 3px solid #667eea;
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1em;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-tab:hover {
+            background: #e9ecef;
+            color: #667eea;
+        }
+
+        .nav-tab.active {
+            background: white;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            margin-bottom: -3px;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .guide-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .guide-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .section h3 {
+            color: #764ba2;
+            margin: 20px 0 10px 0;
+        }
+
+        .usage-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+
+        .prohibited-item {
+            background: #fff5f5;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #dc3545;
+        }
+
+        .guideline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .guideline-table th,
+        .guideline-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .guideline-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        .guideline-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .allowed {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .prohibited {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .consequences-list {
+            list-style: none;
+        }
+
+        .consequences-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            border-radius: 5px;
+        }
+
+        .reminder-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .reminder-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .reminder-box ol {
+            margin-left: 20px;
+        }
+
+        .reminder-box li {
+            margin: 10px 0;
+        }
+
+        .acknowledgment-form {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-submit:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .search-container {
+            margin: 20px 0;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            font-size: 1em;
+        }
+
+        .highlight {
+            background-color: yellow;
+            padding: 2px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Acceptable Use Policy</h1>
+            <p>For High School Students</p>
+        </header>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('guide')">Quick Guide</button>
+            <button class="nav-tab" onclick="showTab('acceptable')">Acceptable Uses</button>
+            <button class="nav-tab" onclick="showTab('prohibited')">Prohibited Uses</button>
+            <button class="nav-tab" onclick="showTab('guidelines')">Guidelines</button>
+            <button class="nav-tab" onclick="showTab('consequences')">Consequences</button>
+            <button class="nav-tab" onclick="showTab('acknowledgment')">Acknowledgment</button>
+        </div>
+
+        <div class="content">
+            <div class="search-container">
+                <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search policy..." onkeyup="searchContent()">
+            </div>
+
+            <!-- Quick Guide Tab -->
+            <div id="guide" class="tab-content active">
+                <h2>A Student's Guide to Ethical AI Use</h2>
+                <p style="font-size: 1.1em; margin-bottom: 20px;">As a student, you are on the front lines of AI in education. Here's how you can use these powerful tools responsibly and ethically to enhance your learning.</p>
+                
+                <div class="guide-grid">
+                    <div class="guide-card">
+                        <h3>🎯 Understand AI's Purpose</h3>
+                        <p>Use AI as a tool to brainstorm, get feedback, and learn more efficiently—not to do your thinking for you. The goal is to enhance your skills, not replace them.</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3>💬 Be Transparent</h3>
+                        <p>Honesty builds trust. Always tell your teacher when and how you used AI in your work, following the specific citation rules for your class.</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3>🤔 Critically Evaluate Everything</h3>
+                        <p>Don't blindly trust AI. It can be wrong or biased. Always fact-check its outputs, question its reasoning, and compare it with other reliable sources.</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3>🙈 Don't Overshare Personal Data</h3>
+                        <p>Be very careful about what personal information (name, grades, location) you give to AI tools. Use a burner email when possible to protect your privacy.</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3>📝 Don't Ignore the Rules</h3>
+                        <p>Understand your school's specific policies on AI use. Misrepresenting AI work as your own has serious consequences for academic integrity.</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3>✅ Know Your Rights & Rules</h3>
+                        <p>Familiarize yourself with your school's academic integrity policy regarding AI. Knowing the rules helps you avoid accidental missteps and ensures fairness.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Purpose</h2>
+                    <p>This policy provides clear guidelines for high school students on the appropriate and responsible use of artificial intelligence (AI) tools in their academic work and school activities.</p>
+                </div>
+            </div>
+
+            <!-- Acceptable Uses Tab -->
+            <div id="acceptable" class="tab-content">
+                <h2>Acceptable Uses</h2>
+                
+                <div class="section">
+                    <h3>Educational Enhancement</h3>
+                    <div class="usage-item">
+                        <strong>Research Support:</strong> Use AI to help brainstorm ideas, outline topics, or explain complex concepts
+                    </div>
+                    <div class="usage-item">
+                        <strong>Writing Assistance:</strong> Use AI for grammar checking, editing suggestions, and improving writing clarity
+                    </div>
+                    <div class="usage-item">
+                        <strong>Learning Aid:</strong> Use AI to ask questions about subjects you're studying or to get explanations of difficult material
+                    </div>
+                    <div class="usage-item">
+                        <strong>Creative Projects:</strong> Use AI to generate ideas for art, music, or creative writing projects when explicitly allowed by your teacher
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Academic Collaboration</h3>
+                    <div class="usage-item">
+                        <strong>Study Groups:</strong> Use AI tools to help create study materials or practice questions for group learning
+                    </div>
+                    <div class="usage-item">
+                        <strong>Project Planning:</strong> Use AI to help organize timelines, research topics, or plan presentations
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Required Practices</h3>
+                    <h4>Transparency and Citation</h4>
+                    <ul>
+                        <li><strong>Disclose AI Use:</strong> Always tell your teacher when you've used AI tools in your work</li>
+                        <li><strong>Cite AI Sources:</strong> Include information about which AI tool you used and how you used it</li>
+                        <li><strong>Show Your Work:</strong> Be able to explain and defend any work you submit, whether AI-assisted or not</li>
+                    </ul>
+
+                    <h4>Privacy and Safety</h4>
+                    <ul>
+                        <li><strong>Personal Information:</strong> Never share personal information (yours or others') with AI tools</li>
+                        <li><strong>School Data:</strong> Do not upload confidential school documents or sensitive information to AI platforms</li>
+                        <li><strong>Account Security:</strong> Use only school-approved AI tools and keep login information secure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Prohibited Uses Tab -->
+            <div id="prohibited" class="tab-content">
+                <h2>Prohibited Uses</h2>
+                
+                <div class="section">
+                    <h3>Academic Dishonesty</h3>
+                    <div class="prohibited-item">
+                        <strong>❌ Plagiarism:</strong> Do not submit AI-generated content as your own original work
+                    </div>
+                    <div class="prohibited-item">
+                        <strong>❌ Cheating:</strong> Do not use AI to complete assignments, tests, or quizzes that are meant to assess your individual knowledge
+                    </div>
+                    <div class="prohibited-item">
+                        <strong>❌ Unauthorized Help:</strong> Do not use AI for assignments where your teacher has specifically prohibited its use
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Inappropriate Content</h3>
+                    <div class="prohibited-item">
+                        <strong>❌ Harmful Material:</strong> Do not use AI to create content that is violent, discriminatory, or harassing
+                    </div>
+                    <div class="prohibited-item">
+                        <strong>❌ Inappropriate Images:</strong> Do not generate or share inappropriate visual content
+                    </div>
+                    <div class="prohibited-item">
+                        <strong>❌ Misinformation:</strong> Do not use AI to create or spread false information
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guidelines Tab -->
+            <div id="guidelines" class="tab-content">
+                <h2>Guidelines for Specific Situations</h2>
+
+                <div class="section">
+                    <h3>Writing Assignments</h3>
+                    <table class="guideline-table">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Use AI for brainstorming and outlining</td>
+                                <td class="allowed">✓ Allowed</td>
+                            </tr>
+                            <tr>
+                                <td>Use AI for grammar and spell checking</td>
+                                <td class="allowed">✓ Allowed</td>
+                            </tr>
+                            <tr>
+                                <td>Submit AI-generated essays as your own</td>
+                                <td class="prohibited">✗ Prohibited</td>
+                            </tr>
+                            <tr>
+                                <td>Use AI to help understand assignment requirements</td>
+                                <td class="allowed">✓ Allowed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h3>Research Projects</h3>
+                    <table class="guideline-table">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Use AI to find research topics</td>
+                                <td class="allowed">✓ Allowed</td>
+                            </tr>
+                            <tr>
+                                <td>Use AI to summarize articles you've read</td>
+                                <td class="allowed">✓ Allowed (with disclosure)</td>
+                            </tr>
+                            <tr>
+                                <td>Use AI-generated "facts" without verification</td>
+                                <td class="prohibited">✗ Prohibited</td>
+                            </tr>
+                            <tr>
+                                <td>Use AI to help organize your research</td>
+                                <td class="allowed">✓ Allowed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h3>Tests and Quizzes</h3>
+                    <table class="guideline-table">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Use AI during closed-book tests</td>
+                                <td class="prohibited">✗ Prohibited</td>
+                            </tr>
+                            <tr>
+                                <td>Use AI for take-home assignments</td>
+                                <td class="allowed">Only if explicitly allowed by teacher</td>
+                            </tr>
+                            <tr>
+                                <td>Use AI to study for tests</td>
+                                <td class="allowed">✓ Allowed</td>
+                            </tr>
+                            <tr>
+                                <td>Use AI to check answers after completion</td>
+                                <td class="allowed">Only if explicitly allowed by teacher</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h3>Getting Help</h3>
+                    <h4>When in Doubt</h4>
+                    <ul>
+                        <li>Ask your teacher before using AI tools</li>
+                        <li>Check the assignment instructions carefully</li>
+                        <li>Seek clarification about AI policies for specific projects</li>
+                    </ul>
+
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>Speak with your teacher during office hours</li>
+                        <li>Contact the school's technology coordinator</li>
+                        <li>Review your school's general academic integrity policy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Consequences Tab -->
+            <div id="consequences" class="tab-content">
+                <h2>Consequences</h2>
+
+                <div class="section">
+                    <h3>First Violation</h3>
+                    <ul class="consequences-list">
+                        <li>Conference with teacher and student</li>
+                        <li>Opportunity to redo assignment with proper AI disclosure</li>
+                        <li>Parent/guardian notification</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Repeated Violations</h3>
+                    <ul class="consequences-list">
+                        <li>Assignment receives zero grade</li>
+                        <li>Parent/guardian meeting required</li>
+                        <li>Possible suspension from class activities</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Serious Violations</h3>
+                    <ul class="consequences-list">
+                        <li>Referral to school administration</li>
+                        <li>Potential disciplinary action per school handbook</li>
+                        <li>Possible course failure</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Teacher Responsibilities</h3>
+                    <h4>Clear Communication</h4>
+                    <ul>
+                        <li>Specify AI use policies for each assignment</li>
+                        <li>Provide examples of appropriate vs. inappropriate AI use</li>
+                        <li>Offer guidance on how to properly cite AI assistance</li>
+                    </ul>
+
+                    <h4>Support and Education</h4>
+                    <ul>
+                        <li>Teach students about responsible AI use</li>
+                        <li>Provide alternatives when AI use is prohibited</li>
+                        <li>Help students understand academic integrity principles</li>
+                    </ul>
+                </div>
+
+                <div class="reminder-box">
+                    <h3>Important Reminders</h3>
+                    <ol>
+                        <li><strong>AI is a Tool:</strong> Like calculators or spell-checkers, AI should enhance your learning, not replace your thinking</li>
+                        <li><strong>Own Your Work:</strong> You are responsible for understanding and being able to explain everything you submit</li>
+                        <li><strong>Check for Accuracy:</strong> AI can make mistakes - always verify important information</li>
+                        <li><strong>Respect Others:</strong> Use AI in ways that are fair to your classmates and respectful of your teachers</li>
+                        <li><strong>Follow All Policies:</strong> This AI policy works alongside your school's existing academic integrity and technology use policies</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Acknowledgment Tab -->
+            <div id="acknowledgment" class="tab-content">
+                <h2>Policy Acknowledgment</h2>
+                
+                <div class="acknowledgment-form">
+                    <h3>Student Acknowledgment</h3>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="studentRead" onchange="updateSubmitButton()">
+                        <label for="studentRead">I have read and understand this AI Acceptable Use Policy. I agree to follow these guidelines in all my school-related activities.</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentName">Student Name:</label>
+                        <input type="text" id="studentName" onchange="updateSubmitButton()">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentDate">Date:</label>
+                        <input type="date" id="studentDate" onchange="updateSubmitButton()">
+                    </div>
+
+                    <button class="btn-submit" id="submitBtn" onclick="submitForm()" disabled>Submit Acknowledgment</button>
+                    
+                    <div id="submissionMessage" style="margin-top: 20px; padding: 15px; border-radius: 5px; display: none;"></div>
+                </div>
+
+                <div class="section">
+                    <h3>Policy Updates</h3>
+                    <p>This policy will be reviewed and updated regularly as AI technology evolves. Students and parents will be notified of any changes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function updateSubmitButton() {
+            const studentRead = document.getElementById('studentRead').checked;
+            const studentName = document.getElementById('studentName').value.trim();
+            const studentDate = document.getElementById('studentDate').value;
+
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (studentRead && studentName && studentDate) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+
+        function submitForm() {
+            const studentName = document.getElementById('studentName').value;
+            const studentDate = document.getElementById('studentDate').value;
+
+            const message = document.getElementById('submissionMessage');
+            message.style.display = 'block';
+            message.style.background = '#d4edda';
+            message.style.color = '#155724';
+            message.style.border = '1px solid #c3e6cb';
+            message.innerHTML = '<strong>✓ Acknowledgment Submitted Successfully!</strong><br>Student: ' + studentName + ' (' + studentDate + ')<br><br><em>Note: In a real implementation, this would be sent to your teacher or school system.</em>';
+
+            message.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function searchContent() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const allContent = document.querySelectorAll('.tab-content');
+            
+            allContent.forEach(content => {
+                content.innerHTML = content.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/gi, '$1');
+            });
+
+            if (searchTerm.length < 3) return;
+
+            allContent.forEach(content => {
+                const textNodes = getTextNodes(content);
+                textNodes.forEach(node => {
+                    const text = node.textContent;
+                    if (text.toLowerCase().includes(searchTerm)) {
+                        const regex = new RegExp('(' + searchTerm + ')', 'gi');
+                        const span = document.createElement('span');
+                        span.innerHTML = text.replace(regex, '<span class="highlight">$1</span>');
+                        node.parentNode.replaceChild(span, node);
+                    }
+                });
+            });
+        }
+
+        function getTextNodes(node) {
+            const textNodes = [];
+            const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
+            let currentNode;
+            while (currentNode = walker.nextNode()) {
+                if (currentNode.textContent.trim().length > 0) {
+                    textNodes.push(currentNode);
+                }
+            }
+            return textNodes;
+        }
+
+        window.onload = function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('studentDate').value = today;
+        }
+    </script>
+</body>
+</html>
